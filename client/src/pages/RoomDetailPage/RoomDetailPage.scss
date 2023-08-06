@@ -1,0 +1,19 @@
+@import '../../styles//mixin.scss';
+
+.room-detail {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 46rem);
+
+  box-sizing: content-box;
+  max-width: 112rem;
+  padding: 0 5rem;
+  margin: 3rem auto 5rem;
+
+  @include respond(lg) {
+    grid-template-columns: 100%;
+    padding: 0 3rem;
+  }
+  @include respond(xs) {
+    padding: 0 2rem;
+  }
+}

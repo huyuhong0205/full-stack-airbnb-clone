@@ -1,0 +1,52 @@
+@import '../../styles/mixin.scss';
+
+.avatar {
+  &__figure {
+    position: relative;
+
+    height: 12rem;
+    width: 12rem;
+
+    border-radius: 999px;
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+    overflow: hidden;
+
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-light-2),
+      var(--color-primary-dark-2)
+    );
+
+    cursor: pointer;
+
+    & img {
+      @include image-cover;
+      transition: all 0.3s;
+    }
+  }
+
+  &__figure:hover img {
+    filter: blur(3px) brightness(80%);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+
+    opacity: 0;
+    transition: all 0.3s ease-out;
+
+    &-icon {
+      height: 4rem;
+      width: 4rem;
+      color: #fff;
+    }
+  }
+
+  &__figure:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

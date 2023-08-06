@@ -1,0 +1,117 @@
+@import '../../styles/mixin.scss';
+
+.room-detail {
+  &__new-booking {
+    grid-column: 2 / 3;
+    grid-row: 3 / 6;
+
+    @include respond(lg) {
+      grid-column: 1;
+      grid-row: 5;
+    }
+
+    &__section-title {
+      display: none;
+
+      @include respond(lg) {
+        display: block;
+      }
+    }
+  }
+}
+
+.new-booking__container {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+  padding-left: 2rem;
+  margin-top: 3rem;
+
+  @include respond(lg) {
+    padding-left: 0;
+    margin-top: 0;
+  }
+}
+
+.new-booking {
+  position: sticky;
+  top: var(--header-height);
+
+  max-width: 36rem;
+  padding: 2.4rem;
+  margin-left: auto;
+  border: 1px solid var(--color-gray-light-3);
+  border-radius: 1.5rem;
+  box-shadow: 0px 6px 16px rgb(0, 0, 0, 0.1);
+
+  @include respond(lg) {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+  }
+
+  &__info {
+    margin-bottom: 2rem;
+  }
+
+  &__price {
+    font-size: 1.6rem;
+
+    & span {
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+  }
+
+  &__dates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-bottom: 2rem;
+    border: var(--border-light);
+    border-radius: 1rem;
+
+    font-size: 1.6rem;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    &:not(:last-child) {
+      border-right: var(--border-light);
+    }
+
+    & span {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__total {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 1rem;
+
+    margin-bottom: 2rem;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    &-calc {
+      word-wrap: break-word;
+    }
+
+    &-amount {
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}

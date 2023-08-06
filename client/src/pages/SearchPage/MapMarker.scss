@@ -1,0 +1,70 @@
+@import '../../styles/mixin.scss';
+
+.marker {
+  position: relative;
+  width: max-content;
+  cursor: pointer;
+
+  &__price {
+    padding: 0.3rem;
+    border-radius: 999px;
+    box-shadow: 0px 6px 12px -2px rgba(50, 50, 93, 0.25),
+      0px 3px 7px -3px rgba(0, 0, 0, 0.3);
+
+    background-color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    transition: scale 0.2s;
+    cursor: pointer;
+
+    &:hover,
+    &--hover {
+      z-index: calc(var(--index-marker-popup) - 1);
+      position: relative;
+      scale: 1.07;
+    }
+    &--hover {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+  }
+
+  &__popup {
+    z-index: var(--index-marker-popup);
+    @include absolute-center;
+
+    &:hover {
+      z-index: calc(var(--index-marker-popup) + 1);
+    }
+  }
+
+  &__btn {
+    // self
+    z-index: var(--index-marker-popup);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    // as parent
+    @include flex-center;
+
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 999px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    &-icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}

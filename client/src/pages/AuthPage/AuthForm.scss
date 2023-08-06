@@ -1,0 +1,28 @@
+@import '../../styles/mixin.scss';
+
+.auth {
+  &__form {
+    display: grid;
+    gap: 0.5rem;
+
+    padding: 2rem;
+    margin: 4rem 2rem;
+    border: var(--border-light);
+    border-radius: 1rem;
+  }
+
+  &__switch {
+    justify-self: end;
+
+    padding: 0.3rem 0;
+
+    text-decoration: underline;
+
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

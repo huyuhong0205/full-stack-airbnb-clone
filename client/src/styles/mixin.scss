@@ -1,0 +1,71 @@
+// Center
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Image
+@mixin image-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+// Text
+@mixin text-ellipsis {
+  overflow: clip;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Media query
+@mixin respond($breakpoint) {
+  @if ($breakpoint == 2xs) {
+    @media (width < 400px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xs) {
+    @media (width < 480px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == sm) {
+    @media (width < 600px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == md) {
+    @media (width < 768px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == lg) {
+    @media (width < 1024px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xl) {
+    @media (width < 1280px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == 2xl) {
+    @media (width < 1500px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == 3xl) {
+    @media (width < 1920px) {
+      @content;
+    }
+  }
+}

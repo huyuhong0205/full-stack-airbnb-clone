@@ -1,0 +1,51 @@
+@import '../../styles/mixin.scss';
+
+.footer {
+  display: grid;
+  grid-template-rows: 1fr minmax(min-content, max-content);
+
+  height: 20rem;
+  width: 100%;
+  border-top: 1px solid #dddddd;
+
+  background-color: var(--color-gray-light-3);
+
+  &__links {
+    // as child
+    justify-self: center;
+    align-self: center;
+    // as parent
+    @include flex-center;
+    flex-direction: column;
+
+    &-title {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
+
+  &__link {
+    @include flex-center;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active {
+      color: var(--color-primary-dark-2);
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__copyright {
+    // as child
+    justify-self: center;
+    // as parent
+    @include flex-center;
+    flex-wrap: wrap;
+
+    margin-bottom: 1rem;
+  }
+}

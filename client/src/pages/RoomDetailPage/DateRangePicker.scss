@@ -1,0 +1,11 @@
+@import '../../styles/mixin.scss';
+
+.room-detail {
+  &__date-range {
+    grid-column: 1;
+
+    &-picker {
+      @include flex-center;
+    }
+  }
+}

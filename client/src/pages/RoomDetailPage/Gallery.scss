@@ -1,0 +1,105 @@
+@import '../../styles/mixin.scss';
+
+.gallery {
+  grid-column: 1 / -1;
+  overflow: hidden;
+
+  &__display {
+    position: relative;
+
+    @include flex-center;
+    flex-direction: column;
+
+    height: 35vw;
+    width: 100%;
+    overflow: hidden;
+
+    @include respond(2xl) {
+      min-height: 40vw;
+    }
+    @include respond(xl) {
+      min-height: 45vw;
+    }
+    @include respond(lg) {
+      min-height: 50vw;
+    }
+  }
+
+  &__figure {
+    height: 0;
+    width: 0;
+    transition: filter 0.3s ease;
+    filter: brightness(70%);
+
+    &--active {
+      height: 100%;
+      width: 100%;
+      filter: brightness(100%);
+    }
+
+    & img {
+      @include image-cover;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+
+    height: 100%;
+    width: 15%;
+
+    background-color: transparent;
+
+    opacity: 0;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--left {
+      left: 0;
+    }
+    &--right {
+      right: 0;
+    }
+
+    &-icon {
+      box-sizing: content-box;
+      height: 3rem;
+      width: 3rem;
+      padding: 0.5rem;
+      border-radius: 999px;
+
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    overflow-x: auto;
+
+    &-img {
+      height: 7.5rem;
+      width: 13.5rem;
+
+      object-fit: cover;
+
+      transition: filter 0.3s;
+      cursor: pointer;
+      filter: brightness(70%);
+
+      &--active {
+        border: 5px solid var(--color-primary-dark-2);
+        filter: brightness(100%);
+      }
+
+      @include respond(lg) {
+        height: 6.5rem;
+        width: 11.5rem;
+      }
+    }
+  }
+}

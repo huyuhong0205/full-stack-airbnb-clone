@@ -1,0 +1,40 @@
+@import '../../styles/mixin.scss';
+
+.pagination {
+  @include flex-center;
+  margin: 2rem 0;
+
+  &__btn {
+    @include flex-center;
+
+    height: 3.5rem;
+    width: 3.5rem;
+    margin: 0 0.7rem;
+    border-radius: 999px;
+
+    background-color: transparent;
+    font-size: 1.6rem;
+
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-gray-light-1-trans);
+    }
+
+    &--active {
+      background-color: var(--color-primary) !important;
+      color: #fff;
+    }
+    &--disable {
+      background-color: transparent !important;
+      color: var(--color-gray-light-2);
+      cursor: default;
+    }
+
+    &-icon {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+  }
+}

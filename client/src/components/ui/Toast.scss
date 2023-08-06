@@ -1,0 +1,91 @@
+@import '../../styles/mixin.scss';
+
+.toast {
+  // self
+  z-index: var(--index-toast);
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  translate: -50% 0;
+  // as parent
+  @include flex-center;
+
+  height: 5rem;
+  width: max-content;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 19px 38px rgba(0, 0, 0, 0.3),
+    0px 15px 12px rgba(0, 0, 0, 0.22);
+
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+
+  &--success {
+    background-color: var(--color-green);
+  }
+  &--warning {
+    background-color: var(--color-orange);
+  }
+  &--error {
+    background-color: var(--color-red);
+  }
+
+  &__message {
+    margin-right: 2rem; // toast__icon width
+  }
+
+  &__btn {
+    // self
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    translate: 0 -50%;
+    // as parent
+    @include flex-center;
+
+    padding: 0.3rem;
+    border-radius: 999px;
+
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    &-icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+// for animation
+.toast {
+  &-enter {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  &-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 200ms;
+  }
+
+  &-exit {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-exit-active {
+    transform: translateY(-2rem);
+    opacity: 0;
+    transition: all 200ms;
+  }
+}

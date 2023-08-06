@@ -1,0 +1,86 @@
+@import '../../styles/mixin.scss';
+
+.header {
+  // self
+  z-index: var(--index-header);
+  position: fixed;
+  top: 0;
+  left: 0;
+  // as parent
+  display: grid;
+  grid-template-columns: auto 25% auto;
+  justify-content: space-between;
+  align-items: center;
+
+  height: var(--header-height);
+  width: 100%;
+  padding: 1.5rem 4rem;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+
+  background-color: #fff;
+
+  @include respond(xl) {
+    grid-template-columns: auto 40% auto;
+    padding: 1.5rem 2rem;
+  }
+  @include respond(md) {
+    grid-template-columns: auto 45% auto;
+  }
+  @include respond(sm) {
+    grid-template-columns: auto 55% auto;
+    padding: 1.5rem 1rem;
+  }
+  @include respond(xs) {
+    grid-template-columns: auto 72% auto;
+  }
+}
+
+.header {
+  &__logo {
+    height: 4rem;
+    cursor: pointer;
+  }
+
+  &__img {
+    height: 100%;
+
+    &--large {
+      @include respond(sm) {
+        display: none;
+      }
+    }
+
+    &--small {
+      display: none;
+
+      @include respond(sm) {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    @include flex-center;
+
+    box-sizing: content-box;
+    padding: 0.5rem;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    &--open {
+      display: none;
+      grid-column: 3 / 4;
+
+      @include respond(sm) {
+        display: flex;
+      }
+    }
+
+    &__icon {
+      height: 2.2rem;
+      width: 2.2rem;
+      color: var(--color-gray-dark-1);
+    }
+  }
+}

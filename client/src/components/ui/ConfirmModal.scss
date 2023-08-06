@@ -1,0 +1,26 @@
+@import '../../styles/mixin.scss';
+
+.confirm-modal {
+  display: grid;
+  row-gap: 2rem;
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__message {
+    font-size: 1.8rem;
+  }
+
+  &__btns {
+    // as child
+    justify-self: end;
+    // as parent
+    @include flex-center;
+
+    & > *:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+}

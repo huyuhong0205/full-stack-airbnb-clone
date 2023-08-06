@@ -1,0 +1,18 @@
+# node modules
+/node_modules
+
+# vscode settings
+/.vscode
+
+# compiled javascript
+/dist
+
+# env - [NOTE] for public repo
+/server/env
+.env.*
+
+# dev data - [NOTE] for public repo
+/server/dev-data/
+
+# gitignore
+*/.gitignore

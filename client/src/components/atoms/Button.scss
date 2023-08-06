@@ -1,0 +1,56 @@
+@import '../../styles/mixin.scss';
+
+.button {
+  &__btn {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &--primary {
+      background-color: var(--color-primary);
+
+      &:hover {
+        background-color: var(--color-primary-dark-2);
+      }
+    }
+
+    &--red {
+      background-color: var(--color-red);
+
+      &:hover {
+        background-color: var(--color-red-dark);
+      }
+    }
+
+    &--green {
+      background-color: var(--color-green);
+
+      &:hover {
+        background-color: var(--color-green-dark);
+      }
+    }
+
+    &--gray {
+      background-color: var(--color-gray-light-2);
+      color: var(--color-gray-dark-2);
+
+      &:hover {
+        background-color: var(--color-gray-light-1);
+      }
+    }
+
+    &:disabled {
+      background-color: var(--color-gray-light-2);
+      color: #fff;
+
+      cursor: not-allowed;
+    }
+  }
+}

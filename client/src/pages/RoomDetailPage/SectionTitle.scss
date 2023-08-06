@@ -1,0 +1,14 @@
+@import '../../styles/mixin.scss';
+
+.room-detail {
+  &__section-title {
+    width: 100%;
+    padding: 2.4rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgb(221, 221, 221);
+
+    font-size: 3rem;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+}

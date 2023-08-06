@@ -1,0 +1,30 @@
+@import '../../styles/mixin.scss';
+
+.new-room__container {
+  max-width: 80rem;
+  width: 80%;
+  margin: 2rem auto;
+
+  @include respond(md) {
+    width: 90%;
+  }
+}
+
+.new-room {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  @include respond(sm) {
+    grid-template-columns: 100%;
+  }
+
+  &__input {
+    grid-column: 1 / -1;
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}

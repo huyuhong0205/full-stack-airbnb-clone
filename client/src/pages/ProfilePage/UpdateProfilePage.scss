@@ -1,0 +1,15 @@
+@import '../../styles/mixin.scss';
+
+.update-profile {
+  @include flex-center;
+  flex-direction: column;
+  height: 100%;
+
+  & > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  &__btn {
+    align-self: flex-end;
+  }
+}

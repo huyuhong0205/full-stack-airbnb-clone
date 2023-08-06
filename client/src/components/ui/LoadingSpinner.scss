@@ -1,0 +1,44 @@
+@import '../../styles/mixin.scss';
+
+.lds-dual-ring {
+  display: inline-block;
+
+  &:after {
+    display: block;
+
+    height: 46px;
+    width: 46px;
+    margin: 1px;
+    border: 5px solid;
+    border-color: var(--color-primary) transparent;
+    border-radius: 50%;
+
+    content: '';
+
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+}
+
+.loading-spinner__overlay {
+  // self
+  z-index: var(--index-spinner);
+  position: fixed;
+  top: 0;
+  left: 0;
+  // as parent
+  @include flex-center;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../styles/mixin.scss';
+
+.modal {
+  z-index: var(--index-modal);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+
+  max-width: 85vw;
+  width: max-content;
+  padding: 2rem;
+  border-radius: 1rem;
+
+  background-color: #fff;
+
+  &__cancel-btn {
+    // self
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    // as parent
+    @include flex-center;
+
+    padding: 0.3rem;
+    border-radius: 999px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    &__icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+// for animation
+.modal {
+  &-enter {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+
+  &-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 200ms;
+  }
+
+  &-exit {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-exit-active {
+    transform: translateY(-10rem);
+    opacity: 0;
+    transition: all 200ms;
+  }
+}

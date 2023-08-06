@@ -1,0 +1,67 @@
+@import '../../styles/mixin.scss';
+
+.check-booking {
+  display: grid;
+  gap: 1.5rem;
+
+  max-width: 45rem;
+  min-width: 25rem;
+
+  font-size: 1.7rem; // for child
+
+  &__title {
+    &--primary {
+      max-width: inherit;
+      margin-top: 0.5rem;
+
+      @include text-ellipsis;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    &--secondary {
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__info {
+    border: var(--border-light);
+    border-radius: 1rem;
+
+    & > * {
+      padding: 1rem;
+    }
+  }
+
+  &__dates {
+    border-bottom: var(--border-light);
+
+    & div {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__price {
+    & div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-calc {
+      margin-right: 2rem;
+    }
+
+    &-total {
+      justify-self: end;
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    justify-self: end;
+  }
+}

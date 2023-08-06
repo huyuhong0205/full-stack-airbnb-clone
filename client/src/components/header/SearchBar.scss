@@ -1,0 +1,53 @@
+@import '../../styles/mixin.scss';
+
+.search-bar {
+  @include flex-center;
+
+  width: 100%;
+  padding: 0 1.5rem;
+  border: var(--border-light);
+  border-radius: 999px;
+
+  transition: all 0.2s;
+
+  // focus on child
+  &:focus-within {
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  }
+
+  &__input {
+    flex: 1;
+
+    padding: 1rem 0;
+
+    background-color: transparent;
+    font-size: 1.6rem;
+    caret-color: var(--color-primary);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--color-gray-light-1);
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    cursor: pointer;
+
+    &-icon {
+      @include flex-center;
+
+      box-sizing: content-box;
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: 0.6rem;
+      border-radius: 999px;
+
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+  }
+}

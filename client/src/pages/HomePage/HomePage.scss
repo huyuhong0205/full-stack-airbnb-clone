@@ -1,0 +1,62 @@
+@import '../../styles/mixin.scss';
+
+.home {
+  padding: 3rem 7rem;
+
+  @include respond(2xl) {
+    padding: 3rem 5rem;
+  }
+  @include respond(xl) {
+    padding: 3rem 5rem;
+  }
+  @include respond(sm) {
+    padding: 3rem 7rem;
+  }
+  @include respond(xs) {
+    padding: 3rem 5rem;
+  }
+  @include respond(2xs) {
+    padding: 3rem;
+  }
+
+  &__rooms {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(min-content, 1fr));
+    gap: 3rem 2rem;
+
+    @include respond(2xl) {
+      grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    }
+    @include respond(xl) {
+      grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    }
+    @include respond(lg) {
+      grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    }
+    @include respond(sm) {
+      grid-template-columns: repeat(1, minmax(min-content, 1fr));
+    }
+  }
+
+  &__loading {
+    @include flex-center;
+    padding: 1rem 0;
+  }
+
+  &__no-more {
+    @include flex-center;
+    padding: 2rem 0 0;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__error {
+    @include flex-center;
+
+    padding: 2rem 0 0;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--color-red);
+  }
+}
