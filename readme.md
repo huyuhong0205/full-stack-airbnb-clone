@@ -69,9 +69,9 @@ PROJECT_ROOT
 
 _All pages support RWD (responsive web design)._
 
-<!-- [TODO] record to gif -->
-
 ### Home page
+
+https://youtu.be/86cd4XQpRgk
 
 - Implement infinite scrolling using Intersection Observer, in conjunction with a Node.js pagination API.
 
