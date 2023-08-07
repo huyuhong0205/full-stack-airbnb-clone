@@ -71,20 +71,26 @@ _All pages support RWD (responsive web design)._
 
 ### Home page
 
-https://youtu.be/86cd4XQpRgk
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/0418ab2f-47c9-4465-92f2-7194269bb49d
 
 - Implement infinite scrolling using Intersection Observer, in conjunction with a Node.js pagination API.
 
 ### Search rooms page
+
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/db2aa19d-9ecd-413f-8183-fdd22c4a20e0
 
 - Utilize MongoDB queries for location-based searches.
 - Use the Google Maps JavaScript API to display a map and markers for rooms. You can also interact with the markers on the map.
 
 ### Room detail page
 
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/d9cb3734-690b-4367-8457-9f714119650c
+
 - You can booking room on this page, of course only logged-in users are allowed.
 
 ### Authentication page
+
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/ae2c5495-f506-42d0-b074-826c4fcc9df5
 
 - Sign up and login.
 - Use custom hooks to validate user input for better user experience.
@@ -94,15 +100,21 @@ https://youtu.be/86cd4XQpRgk
 
 ### Profile page
 
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/e3334588-6d65-4ef6-8069-8e5a8097ba90
+
 - Profile photo upload.
 - Modify user information and change password.
 - Logout.
 
 ### My bookings page
 
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/d114ccdb-bc85-4327-8f08-321dcc7532af
+
 - View user's bookings.
 
 ### My rooms page & Edit room page
+
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/cbc68365-b502-43c0-99a2-1834c8a7d13f
 
 - _landlords only_.
 - Manage host's rooms.
@@ -110,6 +122,8 @@ https://youtu.be/86cd4XQpRgk
 - Delete room. Only rooms without orders can be deleted.
 
 ### Create room page
+
+https://github.com/huyuhong0205/full-stack-airbnb-clone/assets/114565048/dd6dc8ec-25bf-42aa-97f5-65b70ebb9b7f
 
 - _landlords only_.
 - Upload multiple images.
