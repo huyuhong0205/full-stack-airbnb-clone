@@ -89,7 +89,7 @@ https://youtu.be/86cd4XQpRgk
 - Sign up and login.
 - Use custom hooks to validate user input for better user experience.
 - Also validate user input in server side to ensure security.
-- USe JWT and Cookies for user authentication.
+- Use JWT and Cookies for user authentication.
 - Manage authentication and authorization state using Redux.
 
 ### Profile page
