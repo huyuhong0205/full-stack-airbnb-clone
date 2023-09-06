@@ -2,7 +2,7 @@
 
 This is a full-stack web application build from scratch by my self for practicing web development skills.
 
-[https://fullstack-bnb-clone-client.vercel.app/](https://fullstack-bnb-clone-client.vercel.app/)
+~~[https://fullstack-bnb-clone-client.vercel.app/](https://fullstack-bnb-clone-client.vercel.app/)~~
 
 **IMPORTANT** :
 The backend server will automatically shut down after 15 minutes of inactivity. If an error occurs during your visit, please wait for the server to restart.
